@@ -178,7 +178,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <icon value="br.png"/>
+                      <icon value="avataaars (1).png"/>
                       <text value=""/>
                     </properties>
                   </component>
@@ -255,7 +255,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Bempong "/>
+                      <text value="Prince Bempong"/>
                     </properties>
                   </component>
                 </children>
@@ -274,7 +274,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Charlse Ayoriga"/>
+                      <text value="Charles Ayorigya"/>
                     </properties>
                   </component>
                 </children>
@@ -293,7 +293,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Boagye"/>
+                      <text value="Gideon Owusu"/>
                     </properties>
                   </component>
                 </children>
@@ -331,7 +331,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <icon value="br.png"/>
+                      <icon value="avataaars (2).png"/>
                       <text value=""/>
                     </properties>
                   </component>
@@ -351,7 +351,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <icon value="br.png"/>
+                      <icon value="avataaars.png"/>
                       <text value=""/>
                     </properties>
                   </component>
@@ -371,7 +371,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <icon value="br.png"/>
+                      <icon value="bempz.png"/>
                       <text value=""/>
                     </properties>
                   </component>
@@ -391,7 +391,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <icon value="br.png"/>
+                      <icon value="avataaars (4).png"/>
                       <text value=""/>
                     </properties>
                   </component>
@@ -778,7 +778,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <icon value="br.png"/>
+                      <icon value="avataaars (3).png"/>
                       <text value=""/>
                     </properties>
                   </component>

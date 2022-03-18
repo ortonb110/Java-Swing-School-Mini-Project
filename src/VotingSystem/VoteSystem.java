@@ -1,9 +1,8 @@
 package VotingSystem;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 
 public class VoteSystem {
     private JPanel votePanel;
@@ -25,21 +24,18 @@ public class VoteSystem {
     private int presCurrentVotes1Sum = 0;
     private int presCurrentVotes2Sum = 0;
     private int secCurrentVote1Sum = 0;
-
-    public int getSecCurrentVote1Sum() {
-        return secCurrentVote1Sum;
-    }
-
     private int SecCurrentVote2Sum = 0;
     private int SecCurrentVote3Sum = 0;
     private int treasCurrentVote1Sum = 0;
     private int treasCurrentVote2Sum = 0;
-
-//Empty constructor
-
+    //Vote Frame is declared outside of constructor, so we can call it anywhere in the class
+    JFrame voteFrame = new JFrame("Voting System");
+    public JFrame getVoteFrame() {
+        return voteFrame;
+    }
 
     public VoteSystem() {
-        JFrame voteFrame = new JFrame("Voting System");
+
         voteFrame.add(votePanel);
         voteFrame.setTitle("Vote Now");
         voteFrame.setLocationRelativeTo(null);
@@ -84,7 +80,7 @@ public class VoteSystem {
 
             if (treasCheckBox2.isSelected()) {
                 treasCurrentVote2Sum += 1;
-                treasCurrentVote2.setText(String.valueOf(treasCurrentVote1Sum));
+                treasCurrentVote2.setText(String.valueOf(treasCurrentVote2Sum));
             }
         });
 
@@ -112,6 +108,18 @@ public class VoteSystem {
         menuBar.add(display);
         menuBar.add(help);
 
+        //Mnemonics
+        file.setMnemonic(KeyEvent.VK_F);
+        display.setMnemonic(KeyEvent.VK_D);
+        help.setMnemonic(KeyEvent.VK_H);
+
+        //Accelerators
+        exit.setAccelerator(KeyStroke.getKeyStroke('E', InputEvent.CTRL_DOWN_MASK));
+        about.setAccelerator(KeyStroke.getKeyStroke('A', InputEvent.CTRL_DOWN_MASK));
+        newVote.setAccelerator(KeyStroke.getKeyStroke('N', InputEvent.CTRL_DOWN_MASK));
+        result.setAccelerator(KeyStroke.getKeyStroke('R', InputEvent.CTRL_DOWN_MASK));
+
+
         //Action Listeners
         result.addActionListener(e -> {
 
@@ -126,6 +134,16 @@ public class VoteSystem {
 //
         });
 
+        newVote.addActionListener(e -> {
+
+            new logInForm();
+            getVoteFrame().dispose();
+
+        });
+
+        exit.addActionListener(e -> System.exit(0));
+        about.addActionListener(e -> new about());
+        add.addActionListener(e -> new addPortfolio());
 
 
         return menuBar;

@@ -1,21 +1,19 @@
 package VotingSystem;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
 public class logInForm{
     private JPanel framePanel;
-    private JTextField studentNameTF;
     private JTextField studentIDTF;
     private JButton logInBtn;
     private JLabel errorTF;
 
 
-    String[] id = {"01203929D", "D", "01203928D"};
+    String[] id = {"01203929D", "D", "01202600D", "01201311D", "01203928D", "01202195D", "01201425D", "01202440D", "01200637D", "0123902D"};
     //Convert id array to arraylist
     List<String> studentID = Arrays.asList(id);
 
