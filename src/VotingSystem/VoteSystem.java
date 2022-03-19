@@ -48,40 +48,60 @@ public class VoteSystem {
 
         //Submit vote Action Listener
         submitVoteButton.addActionListener(e -> {
+            //Handling user multiple selections
+            if ((presidentCheckBox1.isSelected() & presidentCheckBox2.isSelected()) || ((secCheckbox1.isSelected() & secCheckbox2.isSelected()) ||
+                    (secCheckbox3.isSelected() & secCheckbox1.isSelected()) ||
+                    (secCheckbox3.isSelected() & secCheckbox2.isSelected()))
+            || (treasCheckBox1.isSelected() & treasCheckBox2.isSelected())) {
+                presidentCheckBox1.setSelected(false);
+                presidentCheckBox2.setSelected(false);
+                secCheckbox1.setSelected(false);
+                secCheckbox2.setSelected(false);
+                secCheckbox3.setSelected(false);
+                treasCheckBox1.setSelected(false);
+                treasCheckBox2.setSelected(false);
+                new warningDialogue();
+
+            } else {
+                if (presidentCheckBox1.isSelected()) {
+                    presCurrentVotes1Sum +=1;
+                    presCurrentVotes1.setText(String.valueOf(presCurrentVotes1Sum));
+                }
+                if (presidentCheckBox2.isSelected()){
+                    presCurrentVotes2Sum += 1;
+                    presCurrentVotes2.setText(String.valueOf(presCurrentVotes2Sum));
+                }
+                //Secretaries Votes
+                if (secCheckbox1.isSelected()) {
+                    secCurrentVote1Sum += 1;
+                    secCurrentVotes1.setText(String.valueOf(secCurrentVote1Sum));
+                }
+                if (secCheckbox2.isSelected()) {
+                    SecCurrentVote2Sum += 1;
+                    secCurrentVotes2.setText(String.valueOf(SecCurrentVote2Sum));
+                }
+
+                if (secCheckbox3.isSelected()) {
+                    SecCurrentVote3Sum += 1;
+                    secCurrentVotes3.setText(String.valueOf(SecCurrentVote3Sum));
+                }
+
+                //Treasurers
+                if (treasCheckBox1.isSelected()) {
+                    treasCurrentVote1Sum += 1;
+                    treasCurrentVote1.setText(String.valueOf(treasCurrentVote1Sum));
+                }
+
+                if (treasCheckBox2.isSelected()) {
+                    treasCurrentVote2Sum += 1;
+                    treasCurrentVote2.setText(String.valueOf(treasCurrentVote2Sum));
+                }
+            }
+
+
+
             //Presidents Votes
-            if (presidentCheckBox1.isSelected()) {
-                presCurrentVotes1Sum +=1;
-                presCurrentVotes1.setText(String.valueOf(presCurrentVotes1Sum));
-            }
-            if (presidentCheckBox2.isSelected()){
-                presCurrentVotes2Sum += 1;
-                presCurrentVotes2.setText(String.valueOf(presCurrentVotes2Sum));
-            }
-            //Secretaries Votes
-            if (secCheckbox1.isSelected()) {
-                secCurrentVote1Sum += 1;
-                secCurrentVotes1.setText(String.valueOf(secCurrentVote1Sum));
-            }
-            if (secCheckbox2.isSelected()) {
-                SecCurrentVote2Sum += 1;
-                secCurrentVotes2.setText(String.valueOf(SecCurrentVote2Sum));
-            }
 
-            if (secCheckbox3.isSelected()) {
-                SecCurrentVote3Sum += 1;
-                secCurrentVotes3.setText(String.valueOf(SecCurrentVote3Sum));
-            }
-
-            //Treasurers
-            if (treasCheckBox1.isSelected()) {
-                treasCurrentVote1Sum += 1;
-                treasCurrentVote1.setText(String.valueOf(treasCurrentVote1Sum));
-            }
-
-            if (treasCheckBox2.isSelected()) {
-                treasCurrentVote2Sum += 1;
-                treasCurrentVote2.setText(String.valueOf(treasCurrentVote2Sum));
-            }
         });
 
 
@@ -97,7 +117,7 @@ public class VoteSystem {
         JMenuItem newVote = new JMenuItem("New");
         JMenuItem exit = new JMenuItem("Exit");
         JMenuItem result = new JMenuItem("Results");
-        JMenuItem about = new JMenuItem("ABout");
+        JMenuItem about = new JMenuItem("About");
 
         file.add(newVote);
         file.add(add);

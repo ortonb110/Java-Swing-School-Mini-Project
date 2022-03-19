@@ -9,6 +9,7 @@ import java.util.Locale;
 public class logInForm{
     private JPanel framePanel;
     private JTextField studentIDTF;
+    private JTextField studentNameTF;
     private JButton logInBtn;
     private JLabel errorTF;
 
